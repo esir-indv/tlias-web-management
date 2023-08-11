@@ -6,6 +6,7 @@ import com.tlias.mapper.EmpMapper;
 import com.tlias.pojo.Emp;
 import com.tlias.pojo.PageBean;
 import com.tlias.service.EmpService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,13 +15,20 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
+@Slf4j
 public class EmpServiceImpl implements EmpService {
+
 
     @Autowired
     private EmpMapper empMapper;
 
     @Override
     public PageBean page(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end) {
+
+        log.info("PageBean...");
+
+
+
         //1、设置分页参数
         PageHelper.startPage(page, pageSize);
         //2、执行查询

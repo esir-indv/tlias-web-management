@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fl</groupId>
-    <artifactId>tlias-web-management</artifactId>
+    <artifactId>tlias-web-management-github</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tlias-web-management</name>
     <description>tlias-web-management</description>

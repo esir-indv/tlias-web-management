@@ -1,3 +1,4 @@
+
 spring:
   #数据库连接信息
   datasource:
@@ -22,3 +23,5 @@ aliyun:
     accessKeyId: LTAI5tCHMVUHVd2EBBakAdVP
     accessKeySecret: VcxTzPSBmJpfkQiZyMgkQhkNVC8sSl
     bucketName: fl-indv-0809
+server:
+  port: 90
