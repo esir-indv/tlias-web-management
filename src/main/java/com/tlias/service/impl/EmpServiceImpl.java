@@ -18,7 +18,6 @@ import java.util.List;
 @Slf4j
 public class EmpServiceImpl implements EmpService {
 
-
     @Autowired
     private EmpMapper empMapper;
 

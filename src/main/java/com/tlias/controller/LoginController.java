@@ -31,6 +31,7 @@ public class LoginController {
             claims.put("username", e.getUsername());
             //jwt中包含了当前员工登陆信息
             String jwt = JwtUtils.generateJwt(claims);
+            log.info("JWT:"+jwt);
             return Result.success(jwt);
         }
         //登陆失败，返回错误信息
