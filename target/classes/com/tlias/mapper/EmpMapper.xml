@@ -78,9 +78,16 @@
 
     <select id="getByUsernameAndPassword" resultType="com.tlias.pojo.Emp">
         select *
-        from emp where username = #{username} and password = #{password};
+        from emp
+        where username = #{username}
+          and password = #{password};
     </select>
 
+    <delete id="deleteByDeptId">
+        delete
+        from emp
+        where dept_id = #{deptId};
+    </delete>
 
 
 </mapper>

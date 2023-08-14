@@ -24,3 +24,7 @@ aliyun:
     bucketName: fl-indv-0809
 server:
   port: 8080
+#Spring事务管理日志
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
