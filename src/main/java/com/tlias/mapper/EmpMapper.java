@@ -1,6 +1,7 @@
 package com.tlias.mapper;
 
 import com.tlias.pojo.Emp;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -28,8 +29,12 @@ public interface EmpMapper {
     void insert(Emp emp);
 
     Emp getById(Integer id);
-
+    //更新员工
     void update(Emp emp);
+    //根据用户名和密码查询员工
 
     Emp getByUsernameAndPassword(Emp emp);
+    //根据部门ID删除该部门下的员工数据
+
+    void deleteByDeptId(Integer deptId);
 }

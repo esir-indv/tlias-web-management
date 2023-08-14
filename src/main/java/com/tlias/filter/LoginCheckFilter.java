@@ -19,14 +19,13 @@ import java.io.IOException;
 @Slf4j
 //@Component
 //@Configuration
-@WebFilter(servletNames = {"LoginCheckFilter"},filterName = "loginCheckFilter",urlPatterns = "/*")
+//@WebFilter(urlPatterns = "/*")
 
 public class LoginCheckFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         log.info("init\n\n\n\n\n\n");
     }
-
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;

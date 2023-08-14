@@ -42,7 +42,6 @@ public class DeptController {
      * */
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
-
         log.info("根据id删除部门：{}", id);
         //调用service
         deptService.delete(id);
