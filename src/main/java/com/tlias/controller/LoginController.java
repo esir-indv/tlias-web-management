@@ -18,7 +18,6 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private EmpService empService;
-
     @PostMapping("/login")
     public Result login(@RequestBody Emp emp) {
         log.info("员工登陆：{}", emp);

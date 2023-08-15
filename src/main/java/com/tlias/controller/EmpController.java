@@ -1,5 +1,6 @@
 package com.tlias.controller;
 
+import com.tlias.anno.Log;
 import com.tlias.pojo.Emp;
 import com.tlias.pojo.PageBean;
 import com.tlias.pojo.Result;
@@ -19,6 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/emps")
 public class EmpController {
+
     @Autowired
     private EmpService empService;
     //条件&分页查询
@@ -35,6 +37,7 @@ public class EmpController {
     }
     //删除操作
     @DeleteMapping("/{ids}")
+    @Log
     public Result delete(@PathVariable List<Integer> ids) {
         log.info("批量删除操作，ids{}", ids);
         empService.delete(ids);
@@ -42,6 +45,7 @@ public class EmpController {
     }
     //编辑新增员工操作
     @PostMapping
+    @Log
     public Result save(@RequestBody Emp emp){
         log.info("新增员工，emp{}",emp);
         empService.save(emp);
@@ -54,6 +58,7 @@ public class EmpController {
         return Result.success(emp);
     }
     @PutMapping
+    @Log
     public Result update(@RequestBody Emp emp){
         log.info("更新员工信息：{}",emp);
         empService.update(emp);
